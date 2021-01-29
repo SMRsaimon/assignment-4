@@ -17,6 +17,12 @@ $('economy-class-minus-count').addEventListener('click', function() {
     SelecteAirTricket('economy', false);
 });
 
+$('bookingBtn').addEventListener('click', function() {
+    const mainSection = $('mainSection');
+    mainSection.style.display = 'none';
+    $('userTricket').style.display = 'block';
+});
+
 // main  function  is created  for controlling tricket Quentity and other function
 
 function SelecteAirTricket(tricketClass, quentity) {
@@ -49,6 +55,10 @@ function TotalPriceCount() {
     // total
     const totalCost = subTotalCost + vatCost;
     $('total-cost').innerText = '$' + totalCost;
+    // total cost show in next page
+    $('total-tricket-cost').innerText = '$' + totalCost;
+    // number of passenger show in next page
+    $('total-passenger-count').innerText = numberOfEconomyTricket + numberofFirstClassTricket;
 }
 
 // this function is created  for converting a number to a string

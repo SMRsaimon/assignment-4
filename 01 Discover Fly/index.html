@@ -9,9 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-
+    <!-- font Awsom  -->
+    <link rel="stylesheet" href="css/all.css">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
     </header>
 
     <!--Booking Section-->
-    <main class="main-content container">
+    <main id="mainSection" class="main-content container">
         <div class="booking-form">
             <h3>Booking Flights</h3>
             <div class="input-group">
@@ -104,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style ">Book Now</button>
+            <button id="bookingBtn" class="btn-style">Book Now</button>
         </div>
 
         <div class="booking-content ">
@@ -115,11 +116,49 @@
     </main>
 
 
-    <div class="container">
-        <div class="booking-confirmation">
-            <h1>Your Booking Confirmation </h1>
+    <section id="userTricket" style="margin-top: 4rem;">
+        <div class="container">
+            <div class="booking-confirmation">
+                <h1 style="font-size: 3rem;">Your Booking <span style=" color: teal;font-size: 3rem "> Confirmation </span> </h1>
+                <h2> <span class="air"><i class="fas fa-plane-departure"></i></span> Dhaka <span><i class="fas fa-long-arrow-alt-right"></i></span>New York</h2>
+                <div class="booking-detailes-container">
+
+                    <div class="booking-detailes">
+                        <h3 style="margin-bottom: 3rem;">Trip summary:-</h3>
+
+                        <span style="color:gray ;font-weight: 800;font-size: 1.1rem;">DEPARTURE</span>
+                        <span style="margin-left: 1rem;color: grey;">Duration: 12h 05m</span>
+                        <h4> <span><i class="fas fa-calendar-alt"></i></span> <span>  Sat Jan 30</span>
+                        </h4>
+                        <div class="time">
+                            <p> <span>3:30 PM</span> <span>Dhaka DAC</span> </p>
+                            <p> <span>4:35 PM</span> <span>New York JFK</span> </p>
+
+
+                        </div>
+
+
+                        <h4>Passenger: <span id="total-passenger-count"> 00</span> </h4>
+                        <h4>Total Cost: <span id="total-tricket-cost">00</span> </h4>
+                        <p class="footer"> <span><i class="far fa-clock"></i></span> This booking will be unavailable in 6h 22m</p>
+
+                    </div>
+
+                </div>
+                <button id="printBtn" onclick="window.print();"> <span><i class="fas fa-print"></i> Print </button>
+
+            </div>
+            <div class="notice">
+                <h3>
+                    <span><i class="fas fa-exclamation-circle"></i></span>
+                    <span> COVID-19 information</span>
+                </h3>
+                <p> Please check your itinerary, including layovers, for travel restrictions prior to booking. A displayed itinerary is not confirmation of your eligibility to travel.</p>
+            </div>
         </div>
-    </div>
+
+    </section>
+
 
 
 

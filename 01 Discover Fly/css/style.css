@@ -150,3 +150,82 @@ a.active {
     display: flex;
     justify-content: space-between;
 }
+
+.booking-confirmation {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgb(241, 240, 240);
+    padding: 25px;
+    border-radius: 5px;
+    height: auto;
+}
+
+.booking-confirmation h1 {
+    text-align: center;
+}
+
+
+/* notic */
+
+.notice {
+    height: auto;
+    padding: 20px;
+    background-color: rgb(250, 239, 239);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.notice p {
+    font-size: .9rem;
+    color: #04288a;
+    margin-left: 1.4rem;
+}
+
+.booking-detailes-container {
+    display: flex;
+    justify-content: center;
+}
+
+.booking-detailes {
+    padding: 20px 20px;
+    background: rgb(255, 255, 255);
+    width: 60%;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+h3,
+span,
+h4 {
+    margin-top: 1rem;
+}
+
+span {
+    font-size: 1rem;
+}
+
+.time {
+    color: gray;
+    padding: 5px;
+    border: 1px solid gray;
+    margin-left: 1rem;
+}
+
+#printBtn {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.footer {
+    font-size: .8rem;
+    margin-top: 2rem;
+}
+
+.air {
+    font-size: 3rem;
+    color: teal;
+}
+
+#userTricket {
+    display: none;
+}
