@@ -50,6 +50,8 @@ a.active {
     grid-template-columns: 2fr 3fr;
     gap: 70px;
     align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .booking-form {
@@ -228,4 +230,15 @@ span {
 
 #userTricket {
     display: none;
+}
+
+footer {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: gainsboro;
 }
