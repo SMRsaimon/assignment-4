@@ -2,6 +2,7 @@
 function $(selectedId) {
     return document.getElementById(selectedId);
 }
+// click event
 
 $('first-class-plush-count').addEventListener('click', function() {
     SelecteAirTricket('first', true);
@@ -16,6 +17,8 @@ $('economy-class-plush-count').addEventListener('click', function() {
 $('economy-class-minus-count').addEventListener('click', function() {
     SelecteAirTricket('economy', false);
 });
+
+// click event  to jump next page
 
 $('bookingBtn').addEventListener('click', function() {
     const mainSection = $('mainSection');
@@ -56,7 +59,7 @@ function TotalPriceCount() {
     const totalCost = subTotalCost + vatCost;
     $('total-cost').innerText = '$' + totalCost;
     // total cost show in next page
-    $('total-tricket-cost').innerText = '$' + totalCost;
+    $('total-tricket-cost').innerText = '   $   ' + totalCost + '    (10% vat include)';
     // number of passenger show in next page
     $('total-passenger-count').innerText = numberOfEconomyTricket + numberofFirstClassTricket;
 }

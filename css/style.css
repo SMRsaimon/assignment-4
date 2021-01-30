@@ -41,7 +41,7 @@ nav ul li a {
 
 nav ul li a:hover,
 a.active {
-    background-color: #3352F2;
+    background-color: teal;
     border-radius: 5px;
 }
 
@@ -81,9 +81,7 @@ a.active {
 }
 
 .plus-minus-btn {
-    color: #3352F2;
-    /* font-size: 30px;
-    padding: 2px; */
+    color: teal;
     margin-top: 10px;
     word-spacing: 20px;
 }
@@ -95,7 +93,7 @@ a.active {
     border: none;
     font-size: 30px;
     outline: none;
-    color: #3352F2;
+    color: teal;
 }
 
 .booking-form .calculations {
@@ -145,7 +143,7 @@ a.active {
     border: none;
     color: #fff;
     font-weight: 500;
-    background-color: #3352F2;
+    background-color: teal;
 }
 
 .amount {
@@ -216,6 +214,9 @@ span {
 #printBtn {
     padding: 8px 12px;
     cursor: pointer;
+    margin-top: 20px;
+    background-color: teal;
+    color: white;
 }
 
 .footer {
@@ -241,4 +242,20 @@ footer p {
     font-size: 1.1rem;
     font-weight: bold;
     color: gainsboro;
+}
+
+@media(max-width:700px) {
+    .booking-detailes {
+        width: 100%;
+    }
+    .inp-width {
+        min-width: 60%;
+    }
+    nav ul {
+        display: flex;
+        margin: 0px 0px;
+    }
+    nav ul li a {
+        padding: 5px;
+    }
 }
