@@ -245,9 +245,8 @@ footer p {
 }
 
 @media(max-width:700px) {
-    .booking-detailes,
-    .main-content {
-        grid-template-columns: 100% 0%;
+    .booking-detailes {
+        width: 100%;
     }
     .inp-width {
         min-width: 60%;
@@ -261,5 +260,8 @@ footer p {
     }
     .booking-content {
         display: none;
+    }
+    .main-content {
+        grid-template-columns: 100%;
     }
 }
