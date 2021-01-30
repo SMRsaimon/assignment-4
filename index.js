@@ -5,25 +5,29 @@ function $(selectedId) {
 // click event
 
 $('first-class-plush-count').addEventListener('click', function() {
-    SelecteAirTricket('first', true);
+    SelecteAirTricket('first-count', true);
 });
 $('first-class-minus-count').addEventListener('click', function() {
-    SelecteAirTricket('first', false);
+    SelecteAirTricket('first-count', false);
 });
 
 $('economy-class-plush-count').addEventListener('click', function() {
-    SelecteAirTricket('economy', true);
+    SelecteAirTricket('economy-count', true);
 });
 $('economy-class-minus-count').addEventListener('click', function() {
-    SelecteAirTricket('economy', false);
+    SelecteAirTricket('economy-count', false);
 });
 
 // click event  to jump next page
 
 $('bookingBtn').addEventListener('click', function() {
-    const mainSection = $('mainSection');
-    mainSection.style.display = 'none';
-    $('userTricket').style.display = 'block';
+    if ($('sub-total-count').innerText == 0) {
+        alert('Please selecete Minimum One Tricket for continue Booking ');
+    } else {
+        const mainSection = $('mainSection');
+        mainSection.style.display = 'none';
+        $('userTricket').style.display = 'block';
+    }
 });
 
 // main  function  is created  for controlling tricket Quentity and other function
@@ -39,15 +43,15 @@ function SelecteAirTricket(tricketClass, quentity) {
         newTricketQuentity = newTricketQuentity - 1;
     }
 
-    $(tricketClass + '-count').value = newTricketQuentity;
+    $(tricketClass).value = newTricketQuentity;
 
     TotalPriceCount();
 }
 
 // this function is created  for calculate total cost vat and subtotal
 function TotalPriceCount() {
-    const numberOfEconomyTricket = ConvertStringToNumber('economy');
-    const numberofFirstClassTricket = ConvertStringToNumber('first');
+    const numberOfEconomyTricket = ConvertStringToNumber('economy-count');
+    const numberofFirstClassTricket = ConvertStringToNumber('first-count');
     // subTotal
     const subTotalCost = numberOfEconomyTricket * 100 + numberofFirstClassTricket * 150;
     $('sub-total-count').innerText = '$' + subTotalCost;
@@ -66,7 +70,7 @@ function TotalPriceCount() {
 
 // this function is created  for converting a number to a string
 function ConvertStringToNumber(targetId) {
-    const input = $(targetId + '-count').value;
+    const input = $(targetId).value;
     const convertToInt = parseInt(input);
     return convertToInt;
 }
